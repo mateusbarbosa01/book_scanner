@@ -38,7 +38,7 @@ Make sure Python *XXX* is installed. Use the following commands to set up your e
 1. Clone the repository:
 
 ```python
-git clone <repository-url>
+git clone https://github.com/mateusbarbosa01/book_scanner
 cd book_scanner
 ```
 2. Create and activate a virtual environment:
@@ -62,6 +62,5 @@ Windows: Download and install Tesseract from UB Mannheim.
 Linux/Mac: Install Tesseract using a package manager:
 ```
 sudo apt-get install tesseract-ocr  # Ubuntu/Debian
-brew install tess
-eract              # MacOS
+brew install tesseract              # MacOS
 ```
