@@ -1,12 +1,10 @@
-from PIL import Image
+import sys
+sys.path.append('C:/Users/mateu/PycharmProjects/book_scanner')
 
-import pytesseract
-
-# print(pytesseract.image_to_string(Image.open('data/book_spines/1-front.jpg')))
+from ocr import *
 
 
-print(pytesseract.image_to_string(Image.open('data/book_spines/3-front.jpg')))
-
+#print(extract_text_from_image('C:/Users/mateu/PycharmProjects/book_scanner/data/book_spines/1-side.jpg'))
 
 
 
