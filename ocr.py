@@ -7,10 +7,10 @@ from pytesseract import Output
 # from PIL import Image
 
 
-### To do: expand the configure_ocr function to set different languages.
+### To do: expand the configure_ocr function.
 
 
-### To do*: explore what to do with the confidence level data. Can we search a dictionrary for close variations of
+### To do**: explore what to do with the confidence level data. Can we search a dictionrary for close variations of
 ###         the word found and correct it based on the dictionary? How to define "close" in this context?
 ###         Can we check the OCR data to see whether this new possible word makes sense?
 
@@ -18,6 +18,7 @@ from pytesseract import Output
 
 ### To do: Make it so that extract_text_with_details doesn't show boxes with empty text in it.
 
+### To do: check how the language detection work in tesseract. Can it handle texts with different languages in it?
 
 
 
@@ -41,7 +42,7 @@ def extract_text_from_image(image):
     Returns:
         string: The text extracted from the image.
     """
-    text = pytesseract.image_to_string(image)
+    text = pytesseract.image_to_string(image, lang='por')
     return text
 
 
@@ -55,12 +56,11 @@ def extract_text_with_details(image):
     Returns:
         dict: A dictionary containing the text along with details such as bounding boxes, and confidence levels
     """
-    details = pytesseract.image_to_data(image, output_type=Output.DICT)
+    details = pytesseract.image_to_data(image, lang='por', output_type=Output.DICT)
     return details
 
 if __name__ == "__main__":
 
-#if the image's path is 'C:/Users/mateu/PycharmProjects/book_scanner/data/book_spines/1-side.jpg'
     image_path = 'C:/Users/mateu/PycharmProjects/book_scanner/data/book_spines/1-side.jpg'
 
     extracted_text = extract_text_from_image(image_path)
@@ -70,3 +70,4 @@ if __name__ == "__main__":
     print(extracted_text)
 
     print(extracted_detail)
+
