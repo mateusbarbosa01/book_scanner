@@ -45,7 +45,8 @@ cd book_scanner
 
 
 ```python 
--m venv venv
+python3 -m venv .venv
+
 source venv/bin/activate    # On Linux/Mac
 venv\Scripts\activate       # On Windows
 ```
