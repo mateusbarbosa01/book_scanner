@@ -64,3 +64,8 @@ Linux/Mac: Install Tesseract using a package manager:
 sudo apt-get install tesseract-ocr  # Ubuntu/Debian
 brew install tesseract              # MacOS
 ```
+
+Install pytesseract:
+```
+pip install pytesseract
+```
